@@ -18,18 +18,10 @@
             line-height: 1.3;
         }
         
-       
-        
         /* Main Content */
         .main-content {
             background: #f9f5ed;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
             min-height: 100vh;
-        }
-        
-        .main-content.visible {
-            opacity: 1;
         }
         
         /* Header */
@@ -371,6 +363,90 @@
             background: linear-gradient(90deg, #d4b896, #c49882, #d4b896);
             margin: 0 auto 20px auto;
         }
+
+        /* Kampanyalar Section */
+        .kampanyalar-section {
+            background: #f9f5ed;
+            padding: 80px 20px;
+        }
+
+        .kampanyalar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .kampanya-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .kampanya-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            background: white;
+        }
+
+        .kampanya-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        .kampanya-image {
+            width: 100%;
+            height: 1200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .kampanya-item:hover .kampanya-image {
+            transform: scale(1.05);
+        }
+
+        .kampanya-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 40px 20px 20px 20px;
+            color: white;
+            transition: all 0.4s ease;
+        }
+
+        .kampanya-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .kampanya-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .kampanya-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .kampanya-image {
+                height: 1000px;
+            }
+            
+            .kampanyalar-section {
+                padding: 60px 20px;
+            }
+        }
         
         @media (max-width: 768px) {
             .menu-page {
@@ -405,13 +481,6 @@
     </style>
 </head>
 <body>
-    <!-- Video Intro -->
-    <section class="video-section" id="video-section">
-        <video class="intro-video" id="intro-video" muted autoplay playsinline preload="auto">
-            <source src="last1.mp4" type="video/mp4">
-        </video>
-    </section>
-
     <!-- Main Content -->
     <section class="main-content" id="main-content">
         <!-- Header -->
@@ -482,14 +551,14 @@
                                 <div class="item-name">Simit</div>
                                 <div class="item-description">Salatalık, domates, tulum peyniri, zeytin</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                             <div class="price-tag">220 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Boyoz</div>
                                 <div class="item-description">Salatalık, domates, tulum peyniri, zeytin</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                             <div class="price-tag">220 ₺</div>
                         </div>
                     </div>
                     
@@ -503,7 +572,7 @@
                                 <div class="item-name">Peynir Tabağı</div>
                                 <div class="item-description">Danish Blue, Gorgonzola</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">520 ₺</div>
                         </div>
                     </div>
                     
@@ -514,7 +583,7 @@
                                 <div class="item-name">Şarküteri Tabağı</div>
                                 <div class="item-description">Bresola, füme kaburga, tulum peyniri, eski kaşar</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">550 ₺</div>
                         </div>
                     </div>
                     
@@ -538,19 +607,19 @@
                             <div class="item-info">
                                 <div class="item-name">Tulum Peynirli Salata</div>
                             </div>
-                            <div class="price-tag">320 ₺</div>
+                            <div class="price-tag">300 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Sezar Salata</div>
                             </div>
-                            <div class="price-tag">680 ₺</div>
+                            <div class="price-tag">420 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Bonfile Salata</div>
                             </div>
-                            <div class="price-tag">420 ₺</div>
+                            <div class="price-tag">600 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
@@ -592,7 +661,7 @@
                                 <div class="item-name">Füme Kaburga</div>
                                 <div class="item-description">Taze mozeralla, füme kaburga, kırmızı soğan, roka</div>
                             </div>
-                            <div class="price-tag">1650 ₺</div>
+                            <div class="price-tag">650 ₺</div>
                         </div>
                         <div class="menu-item special-item">
                             <div class="item-info">
@@ -633,41 +702,41 @@
                                 <div class="item-name">Pesto Soslu Fettucine/Penne</div>
                                 <div class="item-description">Mantar sos, krema, pesto sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">370 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Napoliten Spagetti</div>
                                 <div class="item-description">Napoliten sos, spagetti</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">400 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Bolognese Spagetti</div>
                                 <div class="item-description">Bolognese sos, spagetti</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Fettucine / Penne Alfredo</div>
                                 <div class="item-description">Krema, tavuk, mantar</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Deniz Mahsullü Fettucine</div>
                                 <div class="item-description">Et midye, karides, kalamar, domates</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">680 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mac An Cheese</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag"> ₺</div>
                         </div>
                     </div>
                 </div>
@@ -684,7 +753,7 @@
                             <div class="item-info">
                                 <div class="item-name">Izgara Köfte</div>
                             </div>
-                            <div class="price-tag">1100 ₺</div>
+                            <div class="price-tag">550 ₺</div>
                         </div>
                     </div>
                     
@@ -695,35 +764,36 @@
                                 <div class="item-name">Köri Soslu Tavuk</div>
                                 <div class="item-description">(Salata ve patates ile servis)</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">520 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Barbekü Soslu Tavuk</div>
                                 <div class="item-description">(Salata ve patates ile servis)</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">520 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Kremalı Mantarlı Tavuk</div>
                                 <div class="item-description">(Salata ve patates ile servis)</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">530 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Meksikan Tavuk</div>
                                 <div class="item-description">(Salata ve patates ile servis)</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">520 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Julian Bonfile</div>
                                 <div class="item-description">(Salata ve patates ile servis)</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">650 ₺</div>
+
                         </div>
                     </div>
                 </div>
@@ -738,62 +808,62 @@
                                 <div class="item-name">King Burger</div>
                                 <div class="item-description">Burger köftesi, bonfile, cheddar peyniri, burger sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">650 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Füme Kaburga Burger</div>
                                 <div class="item-description">Burger köftesi, füme kaburga, coleslaw sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">650 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Chicken Sezar Burger</div>
                                 <div class="item-description">Sezar soslu akdeniz yeşilliği, çıtır tavuk, burger sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">530 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">BBQ Burger</div>
                                 <div class="item-description">Burger köftesi, isli peynir, soğan turşusu, bbq sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">490 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Cheese Burger</div>
                                 <div class="item-description">Burger köftesi, cheddar peyniri, burger sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Meksika Burger</div>
                                 <div class="item-description">Jalepone, acı soslu burger köftesi, kaşar peyniri, biber, kırmızı soğan</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">470 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mushroom Burger</div>
                                 <div class="item-description">Burger köftesi, mantar sos, kırmızı soğan, kornişon turşu</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">490 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Kaburga Burger</div>
                                 <div class="item-description">Tiftilmiş kaburga, coleslaw sos, kırmızı soğan, domates</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">650 ₺</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-<!-- Page 3: Atıştırmalıklar -->
+            <!-- Page 3: Atıştırmalıklar -->
             <div class="menu-page">
                 <div class="menu-column">
                     <h2 class="section-title">ATIŞTIRMALIKLAR</h2>
@@ -805,19 +875,19 @@
                             <div class="item-info">
                                 <div class="item-name">Karışık Patates</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">225 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Trüflü Patates</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">270 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Cheddarlı Patates</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">270 ₺</div>
                         </div>
                     </div>
                     
@@ -827,19 +897,19 @@
                             <div class="item-info">
                                 <div class="item-name">Kaşarlı</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">250 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Sucuklu</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">270 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Karışık</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">290 ₺</div>
                         </div>
                     </div>
                     
@@ -849,13 +919,13 @@
                             <div class="item-info">
                                 <div class="item-name">Tavuklu Wrap</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">380 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Etli Wrap</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">480 ₺</div>
                         </div>
                     </div>
                     
@@ -865,13 +935,13 @@
                             <div class="item-info">
                                 <div class="item-name">Tavuklu Taco</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">380 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Etli Taco</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">480 ₺</div>
                         </div>
                     </div>
                     
@@ -881,13 +951,13 @@
                             <div class="item-info">
                                 <div class="item-name">Tavuklu Nachos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">380 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Etli Nachos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">480 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -901,41 +971,41 @@
                             <div class="item-info">
                                 <div class="item-name">Çıtır Kanat</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">420 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Bufalo Soslu Kanat</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">420 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Çıtır Tavuk Tabağı</div>
                                 <div class="item-description">Kaşık patates, çıtır tavuk parçaları</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">420 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Karışık Çıtır Tavuk Tabağı</div>
                                 <div class="item-description">Çıtır toplar, çıtır kanat, çıtır fileto</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">580 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Atıştırma Tabağı</div>
                                 <div class="item-description">Kaşık patates, çıtır tavuk parçaları, soğan halkası, mozeralla sticks, paçanga böreği, sigara böreği ve sosis parçaları</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">580 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Cheddar Grill Tabağı</div>
                                 <div class="item-description">Kaşık patates, ızgara dana sosis, cheddar sos</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">580 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -952,68 +1022,68 @@
                             <div class="item-info">
                                 <div class="item-name">Çay</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">40 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Fincan Çay</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">60 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Türk Kahvesi</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Flat White</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mocha</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">White Chocolate Mocha</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Latte</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Espresso</div>
                                 <div class="item-description">Tek / Duble</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">130 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Caramel Latte</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">160 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Americano</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">140 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Filtre Kahve</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">130 ₺</div>
                         </div>
                     </div>
                     
@@ -1023,43 +1093,43 @@
                             <div class="item-info">
                                 <div class="item-name">Ice Flat White</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice White Chocolate Mocha</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice Mocha</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice Latte</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice Caramel Latte</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">160 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice Americano</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">140 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ice Filtre Kahve</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">130 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -1073,109 +1143,151 @@
                             <div class="item-info">
                                 <div class="item-name">Cool Lime</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">220 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Hibiscus</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">220 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Milkshake</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">190 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Frozen</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">210 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Smoothie</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">210 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Limonata</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">150 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Redbull</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">150 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Taze Sıkma Portakal</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">150 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Ayran</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Churchill</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Soda</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">80 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Coca-Cola</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Fanta</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Sprite</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Fuse Tea</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Meyve Suyu</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">90 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Su 330 ml</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">50 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Su 1 lt</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">100 ₺</div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="section-title" style="margin-top: 40px;">İTHAL İÇKİLER</h2>
+                    <div class="luxury-divider"></div>
+                    
+                    <div class="menu-category">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Jameson</div>
+                            </div>
+                            <div class="price-tag">420-650 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Olmeca Shot</div>
+                            </div>
+                            <div class="price-tag">250-450 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Chivas</div>
+                            </div>
+                            <div class="price-tag">450-680 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Beefeater Gin</div>
+                            </div>
+                            <div class="price-tag">420-680 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Absolut Vodka</div>
+                            </div>
+                            <div class="price-tag">400-650 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Jägermeister</div>
+                            </div>
+                            <div class="price-tag">350-550 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -1192,31 +1304,31 @@
                             <div class="item-info">
                                 <div class="item-name">Limon Cheesecake</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Orman Meyveli Cheesecake</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Devil's Cake</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">San Sebastian</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Newyork Brownie</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                     </div>
 
@@ -1229,21 +1341,21 @@
                                 <div class="item-name">Tuborg Gold</div>
                                 <div class="item-description">33cl - 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">130-150 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Carlsberg</div>
                                 <div class="item-description">33cl - 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">140-160 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Blanc</div>
                                 <div class="item-description">33cl - 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">130-150 ₺</div>
                         </div>
                     </div>
 
@@ -1255,67 +1367,67 @@
                             <div class="item-info">
                                 <div class="item-name">Tuborg Gold 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">170 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Tuborg Filtresiz 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">180 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Tuborg Amber 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">180 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Carlsberg 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">180 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Carlsberg Luna 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">180 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Sol 33cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">150 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Weihenstephan 33cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">210 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Guinness 44cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Corona 33cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">240 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Miller 33cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">210 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Efes Glutensiz 50cl</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">180 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -1329,19 +1441,19 @@
                             <div class="item-info">
                                 <div class="item-name">Bira + Patates Tabağı</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">300 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Bira + Midye Dolma</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">320 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Bira + Karışık Çıtır Tabağı</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                     </div>
 
@@ -1354,31 +1466,31 @@
                             <div class="item-info">
                                 <div class="item-name">Negroni</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">460 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Long Island</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">500 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Boulevardier</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Cosmopolitan</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Margarita</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">460 ₺</div>
                         </div>
                     </div>
 
@@ -1388,37 +1500,37 @@
                             <div class="item-info">
                                 <div class="item-name">Sorrel Sour</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Passion Margarita</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">210 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Cherry Aged Negroni</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Espresso Martini</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Pinacolada</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Daiquiri</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">420 ₺</div>
                         </div>
                     </div>
 
@@ -1428,47 +1540,7 @@
                             <div class="item-info">
                                 <div class="item-name">Kino Sour</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                    </div>
-
-                    <div class="menu-category">
-                        <h3 class="category-title">İTHAL İÇKİLER</h3>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Jameson</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Olmeca Shot</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Chivas</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Beefeater Gin</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Absolut Vodka</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Jägermeister</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">450 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -1484,50 +1556,35 @@
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Consensus</div>
+                                <div class="item-description">Sarah, cabarnet, merlot</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1800 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Smyrna</div>
+                                <div class="item-description">Cabernet Sauvignon</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1750 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Antre</div>
+                                <div class="item-description">Öküzgözü, boğazkere</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Syrah, Cabernet, Merlot</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Öküzgözü, Boğazkere</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Cabernet Sauvignon</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1750 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Urla Vourla</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">2250 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mozaik Mahrem</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1750 ₺</div>
                         </div>
                     </div>
 
@@ -1538,44 +1595,36 @@
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Consensus</div>
+                                <div class="item-description">Chardonnay</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">2250 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Antre</div>
+                                <div class="item-description">Sauvignon Blanc</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1800 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Smyrna</div>
+                                <div class="item-description">Sauvignon Blanc</div>
+                            </div>
+                            <div class="price-tag">1750 ₺</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <div class="item-name">Urla</div>
+                                <div class="item-description">Chardonnay</div>
+                            </div>
+                            <div class="price-tag">2100 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mahrem Derya</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Smyrna</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Urla</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Chardonnay</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <div class="item-name">Sauvignon Blanc</div>
-                            </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1750 ₺</div>
                         </div>
                     </div>
                 </div>
@@ -1589,14 +1638,28 @@
                             <div class="item-info">
                                 <div class="item-name">Smyrna Grenache - Shiraz</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1750 ₺</div>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <div class="item-name">Mahrem Derya</div>
                             </div>
-                            <div class="price-tag">--- ₺</div>
+                            <div class="price-tag">1800 ₺</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kampanyalar Section -->
+        <div class="kampanyalar-section">
+            <div class="kampanyalar-container">
+                <h2 class="section-title">KAMPANYALAR</h2>
+                <div class="luxury-divider"></div>
+                
+                <div class="kampanya-grid">
+                    <div class="kampanya-item">
+                        <img src="kampanya1.jpg" alt="Kampanya 1" class="kampanya-image">
                     </div>
                 </div>
             </div>
@@ -1646,27 +1709,6 @@
     </section>
 
     <script>
-        window.addEventListener('load', function() {
-            const video = document.getElementById('intro-video');
-            const videoSection = document.getElementById('video-section');
-            const mainContent = document.getElementById('main-content');
-            
-            // Show main content after 3 seconds or when video ends
-            function showMain() {
-                videoSection.style.display = 'none';
-                mainContent.classList.add('visible');
-            }
-            
-            // Auto show main content after 3 seconds
-            setTimeout(showMain, 0001);
-            
-            video.addEventListener('ended', showMain);
-            video.addEventListener('error', showMain);
-            
-            // Click to skip video
-            videoSection.addEventListener('click', showMain);
-        });
-        
         // Smooth scroll to menu function
         function scrollToMenu() {
             const menuContainer = document.querySelector('.menu-container');
